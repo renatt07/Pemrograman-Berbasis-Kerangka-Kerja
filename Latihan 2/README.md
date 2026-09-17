@@ -100,7 +100,7 @@ CalculatorApp/
 
 ![Error](CalculatorSederhana/Documentation/ErrorPembagianNol.png)
 
-## 📝 Catatan Implementasi
+## Catatan
 
 - **`object sender`**: Digunakan untuk mengidentifikasi tombol mana yang memicu event sehingga kode logika tombol digit dan operator tidak perlu diduplikasi untuk setiap tombol.
 - **Kondisi Berantai**: Setelah menekan tombol `=`, hasil dapat langsung dijadikan operand pertama (`firstNumber`) untuk operasi matematika berikutnya tanpa perlu mengetik ulang angka.
