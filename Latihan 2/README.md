@@ -65,25 +65,39 @@ CalculatorApp/
 ## Tampilan Aplikasi
 
 1. Tampilan Utama 
+
 ![TampilanUtama](CalculatorSederhana/Documentation/TampilanAwal.png)
 
 2. Operasi Perhitungan
+
 - Pertambahan
+
 ![Pertambahan](CalculatorSederhana/Documentation/Pertambahan.png)
+
 - Pengurangan
+
 ![Pengurangan](CalculatorSederhana/Documentation/Pengurangan.png)
+
 - Perkalian
+
 ![Perkalian](CalculatorSederhana/Documentation/Perkalian.png)
+
 - Pembagian
+
 ![Pembagian](CalculatorSederhana/Documentation/Pembagian.png)
 
 3. Hasil Negatif dan Desimal
+
 - Hasil Negatif
+
 ![Negatif](CalculatorSederhana/Documentation/HasilNegatif.png)
+
 - Hasil Desimal
+
 ![Desimal](CalculatorSederhana/Documentation/HasilDesimal.png)
 
 3. Penanganan Error (Pembagian Nol / Invalid)
+
 ![Error](CalculatorSederhana/Documentation/ErrorPembagianNol.png)
 
 ## 📝 Catatan Implementasi
