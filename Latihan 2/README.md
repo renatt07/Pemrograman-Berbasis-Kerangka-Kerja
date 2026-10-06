@@ -1,3 +1,14 @@
+# Latihan 2 — Pemrograman Berbasis Kerangka Kerja (PBKK)
+
+| Detail | Keterangan |
+| --- | --- |
+| **Nama Lengkap** | Rennard Filbert Tanjaya |
+| **NRP** | 5025241122 |
+| **Mata Kuliah** | Pemrograman Berbasis Kerangka Kerja |
+| **Kelas** | D |
+
+---
+
 # Desktop Calculator App (C# Windows Forms)
 
 Aplikasi kalkulator desktop sederhana yang dibangun menggunakan **C#**, **.NET**, dan **Windows Forms**. 
