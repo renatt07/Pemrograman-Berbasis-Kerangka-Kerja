@@ -1,4 +1,4 @@
-# Latihan 2 — Pemrograman Berbasis Kerangka Kerja (PBKK)
+# Latihan 3 — Pemrograman Berbasis Kerangka Kerja (PBKK)
 
 | Detail | Keterangan |
 | --- | --- |
