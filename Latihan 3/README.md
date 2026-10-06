@@ -90,43 +90,43 @@ StudentManager/
 
 ### Dashboard Utama
 
-![Dashboard Utama](StudentManager\Documentation\dashboard.png)
+![Dashboard Utama](StudentManager/Documentation/dashboard.png)
 
 ### Pengelolaan Data (CRUD)
 1. Menambahkan data baru (Create)
 
-![Input Data Baru](StudentManager\Documentation\create.png)
+![Input Data Baru](StudentManager/Documentation/create.png)
 
-![Data berhasil ditambah](StudentManager\Documentation\createsuccess.png)
+![Data berhasil ditambah](StudentManager/Documentation/createsuccess.png)
 
 2. Menampilkan Data (Read)
 
-![Search Data](StudentManager\Documentation\search.png)
+![Search Data](StudentManager/Documentation/search.png)
 
 3. Memperbarui data yang sudah ada (Update)
 
-![Update Data](StudentManager\Documentation\update.png)
+![Update Data](StudentManager/Documentation/update.png)
 
-![Data Diperbarui](StudentManager\Documentation\updatesuccess.png)
+![Data Diperbarui](StudentManager/Documentation/updatesuccess.png)
 
 4. Menghapus data (Delete)
 
-![Hapus Data](StudentManager\Documentation\delete.png)
+![Hapus Data](StudentManager/Documentation/delete.png)
 
-![Data berhasil terhapus](StudentManager\Documentation\deletesuccess.png)
+![Data berhasil terhapus](StudentManager/Documentation/deletesuccess.png)
 
 ### Penanganan Validasi & Peringatan Error
 1. User tidak bisa menambahkan data baru yang sama persis dengan data yang ada sekarang
 
-![Data Sama](StudentManager\Documentation\datasama.png)
+![Data Sama](StudentManager/Documentation/datasama.png)
 
 2. User tidak bisa input NRP yang sama
 
-![NRP Sama](StudentManager\Documentation\nrpsama.png)
+![NRP Sama](StudentManager/Documentation/nrpsama.png)
 
 3. User tidak bisa menginput data yang tidak lengkap
 
-![Data Tidak Lengkap](StudentManager\Documentation\tidaklengkap.png)
+![Data Tidak Lengkap](StudentManager/Documentation/tidaklengkap.png)
 
 ---
 
