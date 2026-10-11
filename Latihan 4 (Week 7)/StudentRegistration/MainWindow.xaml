@@ -1,0 +1,189 @@
+﻿<Window x:Class="StudentRegistration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Student Registration System" 
+        Width="1280" Height="768" 
+        WindowStartupLocation="CenterScreen"
+        Background="#F4F7F6">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <!-- Sidebar Kiri (Dark Theme Form) -->
+            <ColumnDefinition Width="320"/>
+            <!-- Main Content Area (Cards & DataGrid) -->
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- ================= SIDEBAR KIRI ================= -->
+        <Border Grid.Column="0" Background="#1E293B" Padding="25">
+            <StackPanel>
+                <TextBlock Text="Student" Foreground="#38BDF8" FontSize="28" FontWeight="Bold"/>
+                <TextBlock Text="Registration" Foreground="White" FontSize="24" FontWeight="Light" Margin="0,0,0,5"/>
+                <Border Height="2" Background="#38BDF8" Width="50" HorizontalAlignment="Left" Margin="0,0,0,25"/>
+
+                <TextBlock Text="FORM DETAIL MAHASISWA" Foreground="#94A3B8" FontSize="12" FontWeight="SemiBold" Margin="0,0,0,15"/>
+
+                <!-- Detail Readonly Inputs -->
+                <TextBlock Text="NIM" Foreground="#E2E8F0" Margin="0,5,0,5"/>
+                <TextBox Text="{Binding SelectedStudent.NIM}" IsReadOnly="True" Padding="8" Background="#334155" Foreground="White" BorderThickness="0" Margin="0,0,0,10"/>
+                
+                <TextBlock Text="Nama Lengkap" Foreground="#E2E8F0" Margin="0,5,0,5"/>
+                <TextBox Text="{Binding SelectedStudent.Name}" IsReadOnly="True" Padding="8" Background="#334155" Foreground="White" BorderThickness="0" Margin="0,0,0,10"/>
+                
+                <TextBlock Text="Program Studi" Foreground="#E2E8F0" Margin="0,5,0,5"/>
+                <TextBox Text="{Binding SelectedStudent.ProgramName}" IsReadOnly="True" Padding="8" Background="#334155" Foreground="White" BorderThickness="0" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Nomor Telepon" Foreground="#E2E8F0" Margin="0,5,0,5"/>
+                <TextBox Text="{Binding SelectedStudent.PhoneNumber}" IsReadOnly="True" Padding="8" Background="#334155" Foreground="White" BorderThickness="0" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Alamat" Foreground="#E2E8F0" Margin="0,5,0,5"/>
+                <TextBox Text="{Binding SelectedStudent.Address}" IsReadOnly="True" Padding="8" Background="#334155" Foreground="White" BorderThickness="0" Margin="0,0,0,25"/>
+                
+                <Button Content="Refresh Data" Command="{Binding RefreshCommand}" Background="#10B981" Foreground="White" FontWeight="Bold" Padding="0,12" BorderThickness="0" Cursor="Hand"/>
+            </StackPanel>
+        </Border>
+
+        <!-- ================= MAIN CONTENT KANAN ================= -->
+        <Grid Grid.Column="1" Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Baris 1: Kartu Ringkasan Statistik -->
+            <UniformGrid Grid.Row="0" Columns="6" Margin="0,0,0,20">
+                <Border Background="White" CornerRadius="8" Padding="12" Margin="0,0,8,0">
+                    <StackPanel>
+                        <TextBlock Text="TOTAL" Foreground="#64748B" FontSize="10" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding TotalStudentsCount}" Foreground="#0F172A" FontSize="24" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="White" CornerRadius="8" Padding="12" Margin="0,0,8,0">
+                    <StackPanel>
+                        <TextBlock Text="INFORMATIKA" Foreground="#64748B" FontSize="10" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding TotalTI}" Foreground="#38BDF8" FontSize="24" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="White" CornerRadius="8" Padding="12" Margin="0,0,8,0">
+                    <StackPanel>
+                        <TextBlock Text="SISTEM INFO" Foreground="#64748B" FontSize="10" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding TotalSI}" Foreground="#38BDF8" FontSize="24" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="White" CornerRadius="8" Padding="12" Margin="0,0,8,0">
+                    <StackPanel>
+                        <TextBlock Text="MANAJEMEN" Foreground="#64748B" FontSize="10" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding TotalMNJ}" Foreground="#38BDF8" FontSize="24" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="White" CornerRadius="8" Padding="12" Margin="0,0,8,0">
+                    <StackPanel>
+                        <TextBlock Text="ELEKTRO" Foreground="#64748B" FontSize="10" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding TotalTE}" Foreground="#38BDF8" FontSize="24" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="White" CornerRadius="8" Padding="12">
+                    <StackPanel>
+                        <TextBlock Text="DKV" Foreground="#64748B" FontSize="10" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding TotalDKV}" Foreground="#38BDF8" FontSize="24" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+
+            <!-- Baris 2: Search Bar & Button -->
+            <Grid Grid.Row="1" Margin="0,0,0,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="120"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid Grid.Column="0" Margin="0,0,10,0">
+                    <TextBox x:Name="SearchBox" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                             Padding="12" FontSize="14" BorderBrush="#CBD5E1" BorderThickness="1" 
+                             Background="White" VerticalContentAlignment="Center"/>
+                    
+                    <TextBlock IsHitTestVisible="False" Text="Cari NIM / Nama / Program Studi..." 
+                               VerticalAlignment="Center" Margin="15,0,0,0" Foreground="#94A3B8" FontSize="14">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=SearchBox}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+
+                <Button Grid.Column="1" Content="Cari Data" Command="{Binding SearchCommand}" 
+                        Background="#38BDF8" Foreground="White" FontWeight="Bold" BorderThickness="0" Cursor="Hand"/>
+            </Grid>
+
+            <!-- Baris 3: DataGrid Display -->
+            <Border Grid.Row="2" Background="White" CornerRadius="8" Padding="10">
+            <DataGrid ItemsSource="{Binding Students}" 
+                    SelectedItem="{Binding SelectedStudent, Mode=TwoWay}" 
+                    AutoGenerateColumns="False" 
+                    IsReadOnly="True" 
+                    AlternatingRowBackground="#F8FAFC" 
+                    RowBackground="White"
+                    GridLinesVisibility="Horizontal"
+                    HorizontalGridLinesBrush="#E2E8F0"
+                    BorderThickness="0"
+                    RowHeight="38"
+                    HeadersVisibility="Column"
+                    VerticalContentAlignment="Center">
+                
+                <DataGrid.Resources>
+                    <!-- Style Header Kolom -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#F1F5F9"/>
+                        <Setter Property="Foreground" Value="#475569"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Padding" Value="10,8"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                    </Style>
+
+                    <!-- Style Sel / Cell (Agar rata vertikal & rapi dengan header) -->
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="Padding" Value="10,0"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="DataGridCell">
+                                    <Border Padding="{TemplateBinding Padding}" 
+                                            Background="{TemplateBinding Background}" 
+                                            BorderThickness="0">
+                                        <ContentPresenter VerticalAlignment="Center" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#E0F2FE"/>
+                                <Setter Property="Foreground" Value="#0369A1"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
+
+                <!-- Pengaturan Lebar Kolom yang Responsif & Presisi -->
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding StudentId}" Width="45"/>
+                    <DataGridTextColumn Header="NIM" Binding="{Binding NIM}" Width="95"/>
+                    <DataGridTextColumn Header="Nama Mahasiswa" Binding="{Binding Name}" Width="1.8*"/>
+                    <DataGridTextColumn Header="Program Studi" Binding="{Binding ProgramName}" Width="1.4*"/>
+                    <DataGridTextColumn Header="Tanggal Lahir" Binding="{Binding BirthDate, StringFormat=dd/MM/yyyy}" Width="105"/>
+                    <DataGridTextColumn Header="No. Telepon" Binding="{Binding PhoneNumber}" Width="115"/>
+                    <DataGridTextColumn Header="Alamat" Binding="{Binding Address}" Width="2*"/>
+                    <DataGridTextColumn Header="Dibuat" Binding="{Binding CreatedAt, StringFormat='dd/MM/yyyy HH:mm'}" Width="130"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+        </Grid>
+    </Grid>
+</Window>
