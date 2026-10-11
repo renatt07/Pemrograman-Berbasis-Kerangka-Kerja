@@ -1,4 +1,4 @@
-# Latihan 4 — Week 7 - Pemrograman Berbasis Kerangka Kerja (PBKK)
+# Latihan 4 — Week 6 - Pemrograman Berbasis Kerangka Kerja (PBKK)
 
 | Detail | Keterangan |
 | --- | --- |
