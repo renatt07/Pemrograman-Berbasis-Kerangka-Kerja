@@ -2,14 +2,6 @@
 
 | Detail | Keterangan |
 | --- | --- |
-| **Mata Kuliah** | Pemrograman Berbasis Kerangka Kerja |
-| **Kelas** | D |
-| **Dosen Pengampu** | Fajar Baskoro, S.Kom., M.T. |
-| **Departemen** | Teknik Informatika, FTEIC — Institut Teknologi Sepuluh Nopember |
-| **Tahun** | 2026 |
-
-| Detail | Keterangan |
-| --- | --- |
 | **Nama Lengkap** | Rennard Filbert Tanjaya |
 | **NRP** | 5025241122 |
 | **Mata Kuliah** | Pemrograman Berbasis Kerangka Kerja |
@@ -26,7 +18,15 @@
 
 ---
 
-# Booking Kampus (C# WPF + SQL Server)
+# Link Video Demo
+
+```bash
+https://youtu.be/e4ZRHAcgmwg
+```
+
+# Topik ETS
+
+`Sistem Informasi Booking Ruangan dan Fasilitas Kampus`
 
 Aplikasi desktop untuk **mengajukan pemakaian ruangan dan fasilitas kampus**, memeriksa jadwal, serta memproses persetujuan oleh administrator. Dibangun menggunakan **C#**, **XAML**, **.NET 8 (Windows Desktop)**, dan **WPF**. Aplikasi terhubung ke **SQL Server** menggunakan **ADO.NET** (`Microsoft.Data.SqlClient`) dan menerapkan arsitektur **MVVM (Model-View-ViewModel)** dengan lapisan **Service** dan **Repository**.
 
