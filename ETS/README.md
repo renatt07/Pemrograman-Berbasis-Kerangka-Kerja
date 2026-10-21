@@ -21,7 +21,7 @@
 # Link Video Demo
 
 ```bash
-https://youtu.be/e4ZRHAcgmwg
+https://youtu.be/jzrz0WBJIos
 ```
 
 # Topik ETS
