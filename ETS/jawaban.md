@@ -1,4 +1,20 @@
-# Booking Kampus
+# Jawaban Soal ETS PBKK D
+
+| Detail | Keterangan |
+| --- | --- |
+| **Nama Lengkap** | Rennard Filbert Tanjaya |
+| **NRP** | 5025241122 |
+| **Mata Kuliah** | Pemrograman Berbasis Kerangka Kerja |
+| **Kelas** | D |
+
+---
+# Soal
+1. Jelaskan deskripsi dan ruang lingkup fitur aplikasi Desktop Rich UI yang dibuat.
+2. Apa latar belakang dan Manfaat aplikasi tersebut di buat.
+3. Buat Poster Infografis aplikasi yang telah dibuat dalam 1 halaman.
+
+---
+# Jawaban
 
 ## 1. Deskripsi dan Ruang Lingkup Fitur
 
@@ -28,3 +44,7 @@ Selama ini permintaan ruangan dilakukan lewat komunikasi manual sehingga sulit d
 - **Bagi mahasiswa:** pengajuan lebih mudah, jadwal bisa dilihat sebelum memilih slot, dan status serta catatan keputusan bisa dipantau langsung.
 - **Bagi administrator:** semua pengajuan terkumpul di satu antrean dengan rincian lengkap. Keputusan lebih cepat dan terdokumentasi, dan data ruangan serta fasilitas terkelola konsisten.
 - **Bagi kampus:** pemakaian ruangan lebih tertib karena bentrok dicegah otomatis, data booking tersimpan terpusat, dan integritas data terjaga lewat constraint database dan otorisasi berlapis.
+
+## 3. Infografis
+
+![Infografis](Documentation/infografis.jpeg)
