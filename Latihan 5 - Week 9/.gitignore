@@ -1,0 +1,58 @@
+# Konfigurasi lokal & kredensial
+.env
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+auth.json
+
+# Dependency Composer & Node
+/shuttle-hub/vendor/
+/siakad/vendor/
+/hoop-kicks/vendor/
+**/node_modules/
+
+# File runtime CodeIgniter (pertahankan index.html & .htaccess)
+**/writable/cache/*
+!**/writable/cache/index.html
+!**/writable/cache/.htaccess
+
+**/writable/debugbar/*
+!**/writable/debugbar/index.html
+!**/writable/debugbar/.htaccess
+
+**/writable/logs/*
+!**/writable/logs/index.html
+!**/writable/logs/.htaccess
+
+**/writable/session/*
+!**/writable/session/index.html
+!**/writable/session/.htaccess
+
+**/writable/uploads/*
+!**/writable/uploads/index.html
+!**/writable/uploads/.htaccess
+
+# Bukti pembayaran hasil testing lokal
+shuttle-hub/public/uploads/payments/*
+!shuttle-hub/public/uploads/payments/.gitkeep
+
+# Cache test, backup, arsip, & file OS/Editor
+**/build/
+**/.phpunit.cache/
+**/.phpunit.result.cache
+*.log
+*.sql
+*.dump
+*.sqlite
+*.sqlite3
+*.zip
+*.tar
+*.gz
+*.bak
+*.tmp
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

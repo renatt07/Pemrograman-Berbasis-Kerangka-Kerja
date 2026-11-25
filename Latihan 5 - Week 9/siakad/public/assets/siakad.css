@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --sk-navy: #0B192C;
+    --sk-navy-soft: #132845;
+    --sk-indigo: #1D4ED8;
+    --sk-indigo-hover: #1E40AF;
+    --sk-gold: #F59E0B;
+    --sk-bg: #F4F6FA;
+    --sk-surface: #FFFFFF;
+    --sk-ink: #0F172A;
+    --sk-muted: #64748B;
+    --sk-border: #E2E8F0;
+    --bs-body-font-family: 'Plus Jakarta Sans', sans-serif;
+    --bs-primary: #1D4ED8;
+    --bs-primary-rgb: 29, 78, 216;
+}
+
+body {
+    background-color: var(--sk-bg);
+    color: var(--sk-ink);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Ubah <code> (NRP, NIP, Kode MK) dari pink Bootstrap jadi pil teknis */
+code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #1E293B;
+    background-color: #EEF2F6;
+    border: 1px solid #DCE3EC;
+    padding: 0.18rem 0.48rem;
+    border-radius: 6px;
+}
+
+/* Topbar putih bersih modern */
+.sb-topnav {
+    background-color: var(--sk-surface) !important;
+    border-bottom: 1px solid var(--sk-border);
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+.sb-topnav .navbar-brand {
+    color: var(--sk-navy) !important;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.sk-crest {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--sk-navy) 0%, var(--sk-indigo) 100%);
+    color: #FCD34D;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sk-toggle-btn {
+    color: var(--sk-muted) !important;
+    border-radius: 8px;
+    padding: 0.35rem 0.55rem;
+}
+
+.sk-toggle-btn:hover {
+    background-color: #F1F5F9;
+    color: var(--sk-navy) !important;
+}
+
+/* Sidebar Oxford Navy */
+.sb-sidenav-dark {
+    background-color: var(--sk-navy);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
+    color: rgba(148, 163, 184, 0.72);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1.35rem 1.25rem 0.5rem;
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link {
+    color: #CBD5E1;
+    font-size: 0.88rem;
+    font-weight: 500;
+    margin: 0.15rem 0.75rem;
+    padding: 0.62rem 0.85rem;
+    border-radius: 10px;
+    transition: all 0.15s ease;
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+    color: #FFFFFF;
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
+    background-color: rgba(29, 78, 216, 0.32);
+    color: #FFFFFF;
+    font-weight: 600;
+    box-shadow: inset 3px 0 0 var(--sk-gold);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active i {
+    color: var(--sk-gold);
+}
+
+.sb-sidenav-dark .sb-sidenav-footer {
+    background-color: #071221;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.82rem;
+}
+
+/* Cards & Headers */
+.card {
+    border: 1px solid var(--sk-border) !important;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03) !important;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: var(--sk-surface) !important;
+    border-bottom: 1px solid var(--sk-border);
+    padding: 0.95rem 1.25rem;
+    font-weight: 700;
+    color: var(--sk-navy);
+}
+
+/* Poles otomatis Kartu Statistik Dashboard agar tidak terlihat Bootstrap polos */
+main .card.bg-primary {
+    background: linear-gradient(135deg, #0B192C 0%, #1E3A8A 100%) !important;
+    border: none !important;
+}
+main .card.bg-success {
+    background: linear-gradient(135deg, #064E3B 0%, #059669 100%) !important;
+    border: none !important;
+}
+main .card.bg-info {
+    background: linear-gradient(135deg, #0C4A6E 0%, #0284C7 100%) !important;
+    border: none !important;
+}
+main .card.bg-warning {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%) !important;
+    border: 1px solid #F59E0B !important;
+    color: #78350F !important;
+}
+main .card.bg-dark {
+    background: linear-gradient(135deg, #1E293B 0%, #334155 100%) !important;
+    border: none !important;
+}
+
+/* Tabel modern */
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: #F8FAFC !important;
+    color: var(--sk-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid var(--sk-border);
+    padding: 0.85rem 1rem;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    padding: 0.88rem 1rem;
+    border-color: #F1F5F9;
+    font-size: 0.9rem;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #F8FAFC;
+}
+
+/* Tombol & Badge */
+.btn {
+    border-radius: 9px;
+    font-weight: 600;
+    font-size: 0.86rem;
+}
+
+.btn-sm {
+    border-radius: 7px;
+    font-size: 0.78rem;
+    padding: 0.34rem 0.72rem;
+}
+
+.btn-primary {
+    background-color: var(--sk-indigo);
+    border-color: var(--sk-indigo);
+}
+
+.btn-primary:hover {
+    background-color: var(--sk-indigo-hover);
+    border-color: var(--sk-indigo-hover);
+}
+
+.btn-warning {
+    background-color: #FEF3C7;
+    border-color: #FDE68A;
+    color: #92400E;
+}
+
+.btn-warning:hover {
+    background-color: #FDE68A;
+    border-color: #F59E0B;
+    color: #78350F;
+}
+
+.btn-danger {
+    background-color: #FEE2E2;
+    border-color: #FECACA;
+    color: #B91C1C;
+}
+
+.btn-danger:hover {
+    background-color: #DC2626;
+    border-color: #DC2626;
+    color: #FFFFFF;
+}
+
+.badge {
+    font-weight: 600;
+    padding: 0.38em 0.68em;
+    border-radius: 6px;
+}
+
+/* Form Input & Select (aman dari panah dropdown nabrak) */
+.form-control,
+.form-select {
+    border-radius: 9px;
+    border: 1px solid #CBD5E1;
+    padding: 0.56rem 0.85rem;
+    font-size: 0.9rem;
+}
+
+.form-select {
+    padding-right: 2.5rem;
+}
+
+.form-control-sm,
+.form-select-sm {
+    border-radius: 8px;
+    padding: 0.42rem 0.72rem;
+    font-size: 0.84rem;
+}
+
+.form-select-sm {
+    padding-right: 2.2rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--sk-indigo);
+    box-shadow: 0 0 0 0.2rem rgba(29, 78, 216, 0.14);
+}
+
+/* Role Pill di Topbar */
+.sk-role-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.28rem 0.65rem;
+    border-radius: 999px;
+}
+.sk-role-admin     { background: #DBEAFE; color: #1E40AF; }
+.sk-role-dosen     { background: #D1FAE5; color: #065F46; }
+.sk-role-mahasiswa { background: #FEF3C7; color: #92400E; }
+
+/* Halaman Login Split-Screen */
+.sk-login-visual {
+    background: linear-gradient(145deg, #0B192C 0%, #172E54 60%, #1D4ED8 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.sk-login-visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+.sk-login-visual::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.22) 0%, transparent 70%);
+    pointer-events: none;
+}

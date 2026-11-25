@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --sh-bg: #F4F7F6;
+    --sh-surface: #FFFFFF;
+    --sh-dark: #0A221F;
+    --sh-dark-2: #113530;
+    --sh-primary: #0F766E;
+    --sh-primary-hover: #0D5E58;
+    --sh-lime: #C6F135;
+    --sh-ink: #0F172A;
+    --sh-muted: #5B6B68;
+    --sh-border: #DCE5E2;
+    --bs-body-font-family: 'Outfit', sans-serif;
+    --bs-primary: #0F766E;
+    --bs-primary-rgb: 15, 118, 110;
+}
+
+body {
+    background-color: var(--sh-bg);
+    color: var(--sh-ink);
+    font-family: 'Outfit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Navbar */
+.sh-navbar {
+    background-color: rgba(10, 34, 31, 0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(198, 241, 53, 0.16);
+    padding: 0.85rem 0;
+}
+
+.sh-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 800;
+    font-size: 1.35rem;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.sh-brand:hover {
+    color: #FFFFFF;
+}
+
+.sh-logo-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background-color: var(--sh-lime);
+    color: var(--sh-dark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sh-brand span.accent {
+    color: var(--sh-lime);
+}
+
+.sh-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.78);
+    font-weight: 500;
+    padding: 0.45rem 0.9rem !important;
+    border-radius: 8px;
+    transition: all 0.15s ease;
+}
+
+.sh-navbar .nav-link:hover,
+.sh-navbar .nav-link.active {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--sh-primary);
+    border-color: var(--sh-primary);
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--sh-primary-hover);
+    border-color: var(--sh-primary-hover);
+}
+
+.btn-lime {
+    background-color: var(--sh-lime);
+    color: var(--sh-dark);
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-lime:hover {
+    background-color: #D4F85A;
+    color: var(--sh-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(198, 241, 53, 0.25);
+}
+
+.btn-outline-light {
+    border-radius: 10px;
+}
+
+/* Hero dengan motif garis lapangan badminton */
+.sh-hero {
+    background: linear-gradient(135deg, var(--sh-dark) 0%, var(--sh-dark-2) 55%, var(--sh-primary) 100%);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid var(--sh-lime);
+}
+
+.sh-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 64px 64px;
+    pointer-events: none;
+}
+
+.sh-hero::after {
+    content: '';
+    position: absolute;
+    right: -80px;
+    top: -80px;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(198, 241, 53, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.sh-pill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background-color: rgba(198, 241, 53, 0.14);
+    border: 1px solid rgba(198, 241, 53, 0.45);
+    color: var(--sh-lime);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+}
+
+.sh-hero-stat {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+    padding: 1.15rem 1.25rem;
+    backdrop-filter: blur(6px);
+}
+
+/* Filter Pills */
+.sh-filter-btn {
+    border-radius: 999px;
+    padding: 0.42rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--sh-border);
+    background-color: var(--sh-surface);
+    color: var(--sh-muted);
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.sh-filter-btn:hover {
+    border-color: var(--sh-primary);
+    color: var(--sh-primary);
+}
+
+.sh-filter-btn.active {
+    background-color: var(--sh-dark);
+    border-color: var(--sh-dark);
+    color: var(--sh-lime);
+}
+
+/* Court Cards */
+.sh-court-card {
+    background-color: var(--sh-surface);
+    border: 1px solid var(--sh-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.sh-court-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(15, 118, 110, 0.45);
+    box-shadow: 0 18px 34px rgba(10, 34, 31, 0.1);
+}
+
+.sh-court-media {
+    position: relative;
+    height: 210px;
+    background: linear-gradient(135deg, #0D2D29 0%, #15514B 100%);
+    overflow: hidden;
+}
+
+.sh-court-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.sh-court-card:hover .sh-court-media img {
+    transform: scale(1.04);
+}
+
+.sh-court-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.72);
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+}
+
+/* Forms & Cards */
+.card {
+    border-radius: 16px;
+    border-color: var(--sh-border);
+}
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+    border-color: var(--sh-border);
+    padding: 0.6rem 0.85rem;
+}
+
+.form-select {
+    padding-right: 2.5rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--sh-primary);
+    box-shadow: 0 0 0 0.2rem rgba(15, 118, 110, 0.16);
+}
+
+/* Footer */
+.sh-footer {
+    background-color: var(--sh-dark);
+    color: rgba(255, 255, 255, 0.65);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
