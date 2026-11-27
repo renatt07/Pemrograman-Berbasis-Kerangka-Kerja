@@ -1,0 +1,272 @@
+:root {
+    --bg-obsidian: #090d16;
+    --bg-surface: #111827;
+    --bg-surface-hover: #172033;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --accent-cyan: #00e5ff;
+    --accent-indigo: #6366f1;
+    --text-primary: #f3f4f6;
+    --text-muted: #9ca3af;
+}
+
+body {
+    background-color: var(--bg-obsidian);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, .brand-font {
+    font-family: 'Chakra Petch', sans-serif;
+    letter-spacing: 0.02em;
+}
+
+/* Navbar */
+.navbar-gaming {
+    background: rgba(9, 13, 22, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.navbar-brand .brand-accent {
+    color: var(--accent-cyan);
+}
+
+.nav-link {
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-cyan) !important;
+}
+
+/* Tombol */
+.btn-cyber {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-indigo));
+    border: none;
+    color: #060911;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-cyber:hover {
+    color: #060911;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 229, 255, 0.28);
+}
+
+.btn-outline-cyber {
+    border: 1px solid rgba(0, 229, 255, 0.45);
+    color: var(--accent-cyan);
+    background: transparent;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-cyber:hover {
+    background: rgba(0, 229, 255, 0.12);
+    border-color: var(--accent-cyan);
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero-gaming {
+    background:
+        radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.22), transparent 45%),
+        radial-gradient(circle at 15% 80%, rgba(0, 229, 255, 0.15), transparent 40%),
+        var(--bg-obsidian);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    color: var(--accent-cyan);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.hero-title-gradient {
+    background: linear-gradient(90deg, #ffffff 30%, var(--accent-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Card & Produk */
+.card-gaming {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 1rem;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+}
+
+.card-gaming:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 229, 255, 0.4);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+}
+
+.product-img-wrap {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.14) 0%, #0d1321 75%);
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+}
+
+.product-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.65));
+    transition: transform 0.35s ease;
+}
+
+.card-gaming:hover .product-img-wrap img {
+    transform: scale(1.05);
+}
+
+.product-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.65rem;
+    border-radius: 0.5rem;
+    background: rgba(9, 13, 22, 0.82);
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    color: var(--accent-cyan);
+    backdrop-filter: blur(6px);
+}
+
+.price-tag {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-cyan);
+}
+
+/* Kategori */
+.category-tile {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    display: block;
+    height: 100%;
+    transition: all 0.25s ease;
+}
+
+.category-tile:hover {
+    background: var(--bg-surface-hover);
+    border-color: var(--accent-cyan);
+    transform: translateY(-4px);
+    color: #ffffff;
+}
+
+.category-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: rgba(0, 229, 255, 0.1);
+    color: var(--accent-cyan);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+/* Thumbnail Galeri */
+.thumb-img {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 0.6rem;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+
+.thumb-img:hover,
+.thumb-img.active {
+    border-color: var(--accent-cyan);
+    opacity: 1;
+}
+
+/* Input Form */
+.form-control,
+.form-select {
+    background-color: #0d1321;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #0d1321;
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 0 0.2rem rgba(0, 229, 255, 0.15);
+    color: #ffffff;
+}
+
+/* Footer */
+.footer-gaming {
+    background-color: #060911;
+    border-top: 1px solid var(--border-subtle);
+}
+
+/* Pagination Katalog CI4 */
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.pagination li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 0.85rem;
+    border-radius: 0.5rem;
+    background-color: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #e5e7eb;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.pagination li a:hover {
+    border-color: #00e5ff;
+    color: #00e5ff;
+    background-color: rgba(0, 229, 255, 0.08);
+}
+
+.pagination li.active a {
+    background: linear-gradient(135deg, #00e5ff, #6366f1);
+    border-color: transparent;
+    color: #090d16;
+}
