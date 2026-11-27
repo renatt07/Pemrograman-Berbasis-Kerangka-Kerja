@@ -350,36 +350,47 @@ Akses aplikasi melalui `http://localhost:8080/`. Untuk memeriksa seluruh route d
 
 ### Storefront & Katalog MySQL
 
-* **Beranda & Katalog dengan Pagination (10 Produk Gaming Gear)**
+* **Beranda & Katalog (10 Produk Gaming Gear)**
   ![Beranda ShopEase](Documentation/01-home.png)
-  ![Katalog & Pagination](Documentation/02-catalog-pagination.png)
+  ![Katalog & Pagination](Documentation/02-catalog.png)
+  ![Katalog & Pagination](Documentation/03-catalog.png)
+  ![Katalog & Pagination](Documentation/04-catalog.png)
 * **Detail Produk & Form Tambah ke Keranjang**
-  ![Detail Produk](Documentation/03-product-detail.png)
+  ![Detail Produk](Documentation/05-product-detail.png)
 
 ### CRUD Kategori & Produk (Admin / Operator)
 
 * **Manajemen Kategori (`/admin/categories`)**
-  ![Manajemen Kategori](Documentation/04-admin-categories.png)
+  ![Manajemen Kategori](Documentation/06-admin-categories.png)
+  ![Tambah Kategori](Documentation/07-admin-categories.png)
+  ![Edit Kategori](Documentation/08-admin-categories.png)
 * **Manajemen Produk & Multi-Upload Galeri (`/admin/products`)**
-  ![Manajemen Produk](Documentation/05-admin-products.png)
-  ![Edit Produk & Galeri](Documentation/06-admin-product-edit.png)
+  ![Manajemen Produk](Documentation/09-admin-products.png)
+  ![Tambah Produk](Documentation/10-admin-products.png)
+  ![Edit Produk & Galeri](Documentation/11-admin-product-edit.png)
+  ![Edit Produk & Galeri](Documentation/12-admin-product-edit.png)
 
 ### Alur Transaksi (Cart, Checkout, Pembayaran, & Pengiriman)
 
 * **Keranjang Belanja (`/cart`) & Halaman Checkout (`/checkout`)**
-  ![Keranjang Belanja](Documentation/07-cart.png)
-  ![Checkout](Documentation/08-checkout.png)
+  ![Keranjang Belanja](Documentation/13-cart.png)
+  ![Checkout](Documentation/14-checkout.png)
 * **Detail Pesanan Customer & Upload Bukti Pembayaran (`/orders/{id}`)**
-  ![Detail Pesanan & Upload Bayar](Documentation/09-customer-order-payment.png)
+  ![Detail Pesanan & Upload Bayar](Documentation/15-customer-order-payment.png)
 * **Verifikasi Pembayaran Admin & Input Resi Operator (`/admin/orders/{id}`)**
-  ![Kelola Pesanan Admin](Documentation/10-admin-order-verify.png)
+  ![Kelola Pesanan Admin](Documentation/16-admin-order-verify.png)
+  ![Kelola Pesanan Admin](Documentation/17-admin-order-verify.png)
+  ![Kelola Pesanan Admin](Documentation/18-admin-order-verify.png)
+  ![Kelola Pesanan Admin](Documentation/19-admin-order-verify.png)
+  ![Kelola Pesanan Admin](Documentation/20-admin-order-verify.png)
 
 ### Dashboard Analitik & Operasional
 
-* **Dashboard Admin & Grafik Penjualan Harian Chart.js (`/admin`)**
-  ![Dashboard Admin](Documentation/11-admin-dashboard.png)
+* **Dashboard Admin & Grafik Penjualan Harian (`/admin`)**
+  ![Dashboard Admin](Documentation/21-admin-dashboard.png)
+  ![Dashboard Admin](Documentation/22-admin-dashboard.png)
 * **Dashboard Operator & Antrean Pengiriman (`/operator`)**
-  ![Dashboard Operator](Documentation/12-operator-dashboard.png)
+  ![Dashboard Operator](Documentation/23-operator-dashboard.png)
 
 ---
 
